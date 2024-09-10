@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #1a1a40, #330066); /* Azul oscuro y lila galáctico */
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  background-image: url('banner-galaxia.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  color: #fff;
+  position: relative;
+  font-size: 2rem;
+}
+
+header .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+nav a {
+  color: #d354ad; /* Color dorado para los enlaces */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #350327;
+}
+
+.intro {
+  padding: 60px 20px;
+  background-color: #1a1a40; /* Fondo oscuro para contrastar con la imagen de perfil */
+}
+
+.intro .container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-text {
+  flex: 1;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+}
+
+.intro-text p {
+  text-align: justify;
+  font-size: 1.2rem; /* Ajusta el tamaño del texto si lo prefieres */
+  line-height: 1.5;  /* Mejora la legibilidad */
+  color: #fff;
+}
+
+
+/* Foto de perfil profesional */
+
+.profile-pic-container {
+  position: relative;
+  width: 400px; /* Aumenta o ajusta el tamaño según prefieras */
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden; /* Asegura que la imagen se mantenga dentro del círculo */
+  border: 4px solid #d354ad; /* Borde dorado */
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrar la imagen */
+  background-image: url('fondo.jpg'); /* Imagen de galaxia */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.profile-pic {
+  width: 400px; /* Ajusta el tamaño de la foto según prefieras */
+  height: 500px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 2; 
+  border: 4px solid #d354ad; /* Borde dorado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.profile-pic:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Sombra profesional */
+}
+
+.skills, .courses-languages, .languages {
+  padding: 60px 20px;
+}
+
+.skills {
+  background-color: #330066; /* Fondo lila para secciones */
+  text-align: center;
+}
+
+.skills h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.skills ul {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.courses-languages {
+  background-color: #1a1a40; /* Fondo oscuro para contraste */
+}
+
+.courses-languages .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.courses, .languages {
+  flex: 1;
+  background-color: #330066; /* Fondo lila */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.courses h3, .languages h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.courses ul, .languages ul {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+
+.languages-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el icono y el texto */
+  font-size: 1.5rem; /* Ajusta el tamaño del texto */
+  text-align: center;
+}
+
+.languages-list i {
+  color: #d354ad; /* Cambia el color del icono */
+  font-size: 2rem; /* Ajusta el tamaño del icono */
+  text-align: center;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+/* Estilo específico para la página de Proyectos */
+.project-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.project-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Asegura que todo el contenido se mantenga dentro del contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.project img {
+  width: 100%; /* Ajusta la imagen al contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 10px;
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionar */
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  color: #d354ad;
+  margin: 10px 0;
+}
+
+.project p {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.project .btn {
+  padding: 10px 20px;
+  background-color: #d354ad;
+  color: #000;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project .btn:hover {
+  background-color: #350327;
+}
+
+/* Estilo específico para la página de Contacto */
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #330066;
+  color: #fff;
+}
+
+form button {
+  padding: 15px 30px;
+  background-color: #d354ad;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #350327;
+}
+
+/*Link de linkedin y github */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #d354ad; /* Puedes cambiar el color del enlace */
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links a:hover {
+  color: #ffffff; /* Cambia el color al pasar el ratón por encima */
+}
+
+.social-links i {
+  font-size: 2rem; /* Ajusta el tamaño del icono */
+}
+
+
