@@ -75,8 +75,8 @@ nav a:hover {
 
 .intro-text p {
   text-align: justify;
-  font-size: 1.2rem; /* Ajusta el tamaño del texto si lo prefieres */
-  line-height: 1.5;  /* Mejora la legibilidad */
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  line-height: 1.5;  /* Mejora legibilidad */
   color: #fff;
 }
 
@@ -101,7 +101,7 @@ nav a:hover {
 
 
 .profile-pic {
-  width: 400px; /* Ajusta el tamaño de la foto según prefieras */
+  width: 400px; /* Ajusta el tamaño de la foto */
   height: 500px;
   object-fit: cover;
   border-radius: 50%;
@@ -321,7 +321,7 @@ form button:hover {
 
 .social-links a {
   text-decoration: none;
-  color: #d354ad; /* Puedes cambiar el color del enlace */
+  color: #d354ad; /* Color del enlace */
   font-size: 1.5rem;
   display: flex;
   align-items: center;
