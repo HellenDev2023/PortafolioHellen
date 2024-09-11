@@ -85,30 +85,30 @@ nav a:hover {
 
 .profile-pic-container {
   position: relative;
-  width: 400px; /* Aumenta o ajusta el tamaño según prefieras */
-  height: 400px;
+  width: 450px; /* Aumenta o ajusta el tamaño según prefieras */
+  height: 450px;
   border-radius: 50%;
   overflow: hidden; /* Asegura que la imagen se mantenga dentro del círculo */
-  border: 4px solid #d354ad; /* Borde dorado */
+  border: 2px solid #d354ad; /* Borde dorado */
   float: right;
   display: flex;
   justify-content: center;
   align-items: center; /* Centrar la imagen */
-  background-image: url('fondo.jpg'); /* Imagen de galaxia */
+  background-image: url('banner-galaxia.jpg'); /* Imagen de galaxia */
   background-size: cover;
   background-position: center;
 }
 
 
 .profile-pic {
-  width: 400px; /* Ajusta el tamaño de la foto */
+  width: 380px; /* Ajusta el tamaño de la foto */
   height: 500px;
   object-fit: cover;
-  border-radius: 50%;
   z-index: 2; 
-  border: 4px solid #d354ad; /* Borde dorado */
+  border-radius: 50%;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
+
 
 .profile-pic:hover {
   transform: scale(1.1); /* Aumenta ligeramente el tamaño */
@@ -334,6 +334,81 @@ form button:hover {
 
 .social-links i {
   font-size: 2rem; /* Ajusta el tamaño del icono */
+}
+
+/* Estilos generales para hacer la página más responsiva */
+@media (max-width: 768px) {
+  .intro-text p {
+    font-size: 1rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
+    line-height: 1.4;
+  }
+
+  .profile-pic-container {
+    width: 200px; /* Ajusta el tamaño de la foto de perfil */
+    height: 200px;
+  }
+
+  .profile-pic {
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Muestra un proyecto por fila */
+  }
+
+  .project {
+    padding: 15px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .project h3 {
+    font-size: 1.2rem; /* Ajusta el tamaño del título del proyecto */
+  }
+
+  .project p {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto de descripción del proyecto */
+  }
+
+  .project .btn {
+    padding: 8px 16px; /* Reduce el tamaño del botón */
+  }
+
+  nav ul {
+    flex-direction: column; /* Apila los enlaces verticalmente en pantallas pequeñas */
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 1rem; /* Ajusta el tamaño de la fuente en los enlaces de navegación */
+    margin: 5px 0; /* Añade margen vertical entre los enlaces */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text p {
+    font-size: 0.9rem; /* Ajusta aún más el tamaño del texto para pantallas muy pequeñas */
+  }
+
+  .profile-pic-container {
+    width: 150px; /* Ajusta el tamaño de la foto de perfil */
+    height: 150px;
+  }
+
+  .project {
+    padding: 10px; /* Reduce el padding para pantallas muy pequeñas */
+  }
+
+  .project h3 {
+    font-size: 1rem; /* Ajusta el tamaño del título del proyecto */
+  }
+
+  .project p {
+    font-size: 0.8rem; /* Ajusta el tamaño del texto de descripción del proyecto */
+  }
+
+  .project .btn {
+    padding: 6px 12px; /* Ajusta el tamaño del botón */
+  }
 }
 
 
