@@ -65,12 +65,12 @@ nav a:hover {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
 
 .intro-text {
   flex: 1;
   font-size: 1.2rem;
-  justify-content: flex-start;
 }
 
 .intro-text p {
@@ -80,12 +80,10 @@ nav a:hover {
   color: #fff;
 }
 
-
 /* Foto de perfil profesional */
-
 .profile-pic-container {
   position: relative;
-  width: 450px; /* Aumenta o ajusta el tamaño según prefieras */
+  width: 450px; /* Tamaño de la foto de perfil en pantallas grandes */
   height: 450px;
   border-radius: 50%;
   overflow: hidden; /* Asegura que la imagen se mantenga dentro del círculo */
@@ -99,7 +97,6 @@ nav a:hover {
   background-position: center;
 }
 
-
 .profile-pic {
   width: 380px; /* Ajusta el tamaño de la foto */
   height: 500px;
@@ -108,7 +105,6 @@ nav a:hover {
   border-radius: 50%;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
-
 
 .profile-pic:hover {
   transform: scale(1.1); /* Aumenta ligeramente el tamaño */
@@ -127,7 +123,6 @@ nav a:hover {
 .skills h3 {
   font-size: 2rem;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .skills ul {
@@ -314,7 +309,7 @@ form button:hover {
   background-color: #350327;
 }
 
-/*Link de linkedin y github */
+/* Link de linkedin y github */
 .social-links {
   margin-top: 20px;
 }
@@ -338,19 +333,45 @@ form button:hover {
 
 /* Estilos generales para hacer la página más responsiva */
 @media (max-width: 768px) {
-  .intro-text p {
+  header {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto del header */
+  }
+
+  header .container {
+    text-align: center; /* Centra el texto en pantallas móviles */
+  }
+
+  .intro .container {
+    flex-direction: column; /* Apila el texto y la foto de perfil verticalmente en pantallas pequeñas */
+    align-items: center; /* Centra el contenido */
+  }
+
+  .intro-text {
+    text-align: justify; /* Centra el texto en pantallas pequeñas */
     font-size: 1rem; /* Ajusta el tamaño del texto para pantallas pequeñas */
-    line-height: 1.4;
   }
 
   .profile-pic-container {
     width: 200px; /* Ajusta el tamaño de la foto de perfil */
     height: 200px;
+    float: none; /* Elimina el flotado en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio entre la foto y el texto */
+    order: -1;
   }
 
   .profile-pic {
     width: 100%;
-    height: 100%;
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .courses-languages .container {
+    flex-direction: column; /* Apila las secciones de cursos y lenguajes verticalmente */
+    gap: 20px;
+  }
+
+  .courses, .languages {
+    width: 100%; /* Ajusta el ancho de las secciones para pantallas pequeñas */
+    margin: 0;
   }
 
   .project-grid {
@@ -411,4 +432,4 @@ form button:hover {
   }
 }
 
-
+/* ESTE CÓDIGO CONTIENE LOS ÚLTIMOS AJUSTES QUE HICE PARA LA VERSIÓN MOBILE*/
